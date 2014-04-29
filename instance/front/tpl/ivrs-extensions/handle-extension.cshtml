@@ -1,0 +1,33 @@
+@{
+    Response.ContentType = "text/xml";
+    
+    var twiml = new Twilio.TwiML.TwilioResponse();
+
+    // @start snippet
+    int user_pushed = int.Parse(Request["Digits"]);
+    // @end snippet
+    
+	if (user_pushed == 0)
+	{
+        twiml.Say("Taking you back to the main menu");
+        twiml.Redirect("handle-incoming-call.xml", "GET");
+	}
+    // @start snippet
+	else if (user_pushed == 1)
+	{
+        twiml.Say("Connecting you to agent 1.");
+        twiml.Dial("+1NNNNNNNNNN");
+	}
+    // @end snippet	
+	else if (user_pushed == 2)
+	{
+        twiml.Say("Connecting you to agent 2.");
+        twiml.Dial("+1NNNNNNNNNN");	
+    }
+	else
+    {
+        twiml.Say("Sorry, that extension is unknown.");
+        twiml.Redirect("handle-user-input.cshtml?Digits=2", "GET");
+	}
+}
+@Html.Raw(twiml.ToString())

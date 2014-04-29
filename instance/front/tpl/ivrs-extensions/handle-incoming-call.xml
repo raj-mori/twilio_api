@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Gather action="handle-extension.php" numDigits="1">
+	<Say voice="woman">Welcome to Alert Cloud.</Say>
+	<Say voice="woman">Please Listen this mp3 music and last get menu</Say>
+		<Play>instrument.mp3</Play>
+		
+		<Say voice="woman">To speak with doctor ken, press 1.</Say>
+		<Say voice="woman">To speak with doctor ruth, press 2.</Say>
+		
+		<Say lalanguage="" voice="woman">For Go to main menu, press 0.</Say>
+	</Gather>
+	<!-- If customer doesn't input anything, prompt and try again. -->
+	<Say>Sorry, I didn't get your response.</Say>
+	<Redirect>handle-incoming-call.xml</Redirect>
+</Response>
