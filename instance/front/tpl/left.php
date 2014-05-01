@@ -33,6 +33,14 @@
                 <a href="<?php l('notification') ?> ">Notification</a>
                
             </li>
+            <li class="dropdown">
+                <a href="<?php l('import_patient') ?> ">Import CSV</a>
+               
+            </li>
+            <li class="dropdown">
+                <a href="<?php l('csv_user_list') ?> ">Patient List</a>
+               
+            </li>
 <!--            <li class=""><a href="<?php l('login?logout=1') ?>">Logout</a></li>-->
         </ul> <?php $admin = getUserNameFromEmail($_SESSION['user']['user_name']); ?>
 	<ul class="nav navbar-nav navbar-right">

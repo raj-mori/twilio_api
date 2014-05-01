@@ -18,7 +18,7 @@ error_reporting(0);
 
 # DB informaitons
 define('DB_HOST', 'localhost');
-define('DB_PASSWORD', 'hp');
+define('DB_PASSWORD', '');
 define('DB_UNAME', 'root');
 define('DB_NAME', 'alert_cloud');
 

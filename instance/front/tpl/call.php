@@ -34,6 +34,6 @@ try {
 } catch (Exception $e) {
     $response['msg'] = '2';
 
-// echo 'Sorry!.. Your Call Failed PlZ Check This Error' . $e->getMessage();
+ echo 'Sorry!.. Your Call Failed PlZ Check This Error' . $e->getMessage();
 }
 print json_encode($response);
